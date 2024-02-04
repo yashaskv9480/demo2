@@ -6,6 +6,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/home/srijith/eclipse-workspace/LabCycle06"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -47,13 +48,10 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="Rvce"/>
-			<item value="Group"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="LabCycle06"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -69,6 +67,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/home/srijith/eclipse-workspace/LabCycle05"/>
 			<item value="/home/srijith/vtr18"/>
 			<item value="/home/srijith/Downloads/vtr18"/>
 		</list>
