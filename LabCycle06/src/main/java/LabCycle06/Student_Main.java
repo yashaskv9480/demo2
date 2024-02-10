@@ -30,14 +30,14 @@ public class Student_Main {
 		t.commit();
 	}
 	
-	public void delete(String usn) {
-		Query q = session.createQuery("delete from Student where usn=:usn");
-		q.setParameter("usn",usn);
+	public void delete(int id) {
+		Query q = session.createQuery("Delete from Student where id=:id");
+		q.setParameter("id",id);
 		int status = q.executeUpdate();
 		if(status == 0) {
-			System.out.println(usn + "Deleted Successfully");
+			System.out.println(id + "Deleted Successfully");
 		}else {
-			System.out.println(usn + "not found");
+			System.out.println(id + "not found");
 		}
 	}
 	
@@ -52,9 +52,9 @@ public class Student_Main {
 			}
 		}
 	
-	public void search(String usn) {
-		Query q = session.createQuery("from Student where usn = :usn");
-		q.setParameter("usn", usn);
+	public void search(int id) {
+		Query q = session.createQuery("from Student where id = :id");
+		q.setParameter("id", id);
 		List l = q.getResultList();
 		if(l.isEmpty()) {
 			System.out.println("Not Found");
@@ -101,15 +101,15 @@ public class Student_Main {
 			case 2:
 				System.out.print("Enter student id to delete\n");
 				System.out.print("Enter the Student id \n");
-				usn = sc.next();
-				sm.delete(usn);
+				id = sc.nextInt();
+				sm.delete(id);
 				break;
 				
 			case 3:
 				System.out.print("Enter student id to search\n");
 				System.out.print("Enter the Student id \n");
-				usn = sc.next();
-				sm.search(usn);
+				id = sc.nextInt();
+				sm.search(id);
 				break;
 				
 			case 4:
