@@ -25,3 +25,7 @@ minikube service myapp-service
 #To open the Dashboard
 
 minikube dashboard
+
+#To close Minikube
+
+minikube stop
