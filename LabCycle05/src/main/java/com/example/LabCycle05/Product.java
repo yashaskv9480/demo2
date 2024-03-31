@@ -6,35 +6,39 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public class Product {
-	@NotNull(message="id is required")
-	@Min(1)
-	@Max(100)
-	private Long id;
+	@NotNull(message="Id is required")
+	@Min(value = 0)
+	@Max(value = 200)
+	int id;
+	
+	@NotNull(message = "Price is required")
+	@Min(value = 0)
+	@Max(value = 200)
+	int price;
 	
 	@NotBlank(message = "Name is required")
-	private String name;
+	String name;
 	
-	@Min(1)
-	@NotNull(message = "Price is required")
-	private Double price;
-	public Long getId() {
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", price=" + price + ", name=" + name + "]";
+	}
+	public int getId() {
 		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
 	}
 	public String getName() {
 		return name;
 	}
-	public Double getPrice() {
-		return price;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public void setPrice(Double price) {
-		this.price = price;
-	}
-	
-
+	} 
 }
