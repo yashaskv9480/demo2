@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: myprg10:latest
+        image: 2562ee3b756f
         imagePullPolicy: Never
         ports:
         - containerPort: 8080

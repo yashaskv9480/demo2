@@ -12,7 +12,5 @@
 	<bean id="department" class="com.example.LabCycle02.Department"
 		scope="prototype">
 		<constructor-arg name="college" ref="college"></constructor-arg>
-
-
 	</bean>
 </beans>
